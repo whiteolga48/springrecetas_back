@@ -14,6 +14,7 @@ public class Ingrediente implements Serializable {
 	@Id
 	private Long id;
 	private String nombre;
+	private String medida;
 	
 	public Ingrediente() {
 		
@@ -35,9 +36,17 @@ public class Ingrediente implements Serializable {
 		this.nombre = nombre;
 	}
 
+	public String getMedida() {
+		return medida;
+	}
+
+	public void setMedida(String medida) {
+		this.medida = medida;
+	}
+
 	@Override
 	public String toString() {
-		return "Ingrediente [id=" + id + ", nombre=" + nombre + "]";
+		return "Ingrediente [id=" + id + ", nombre=" + nombre + ", medida=" + medida + "]";
 	}
-	
+
 }
