@@ -1,10 +1,12 @@
 package com.mariusapps.recetas.backend.integration.model;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name="RECETAS")
@@ -14,6 +16,33 @@ public class Receta implements Serializable {
 	@Id
 	private Long id;
 	private String nombre;
+	
+	@Transient
+	private List<Ingrediente> ingredientes;
+	
+	@Transient
+	private String foto;
+	
+	@Transient
+	private CategoriaReceta categoriaReceta;
+	
+	@Transient
+	private int tiempoDeCoccion;
+	
+	@Transient
+	private int tiempoDePreparacion;
+	
+	@Transient
+	private Temperatura temperatura;
+	
+	@Transient
+	private Dificultad dificultad;
+    
+	@Transient
+	private double coste;
+    
+	@Transient
+	private List<String> pasos;
 	
 	public Receta() {
 		
@@ -35,9 +64,84 @@ public class Receta implements Serializable {
 		this.nombre = nombre;
 	}
 
+	public List<Ingrediente> getIngredientes() {
+		return ingredientes;
+	}
+
+	public void setIngredientes(List<Ingrediente> ingredientes) {
+		this.ingredientes = ingredientes;
+	}
+
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+
+	public CategoriaReceta getCategoriaReceta() {
+		return categoriaReceta;
+	}
+
+	public void setCategoriaReceta(CategoriaReceta categoriaReceta) {
+		this.categoriaReceta = categoriaReceta;
+	}
+
+	public int getTiempoDeCoccion() {
+		return tiempoDeCoccion;
+	}
+
+	public void setTiempoDeCoccion(int tiempoDeCoccion) {
+		this.tiempoDeCoccion = tiempoDeCoccion;
+	}
+
+	public int getTiempoDePreparacion() {
+		return tiempoDePreparacion;
+	}
+
+	public void setTiempoDePreparacion(int tiempoDePreparacion) {
+		this.tiempoDePreparacion = tiempoDePreparacion;
+	}
+
+	public Temperatura getTemperatura() {
+		return temperatura;
+	}
+
+	public void setTemperatura(Temperatura temperatura) {
+		this.temperatura = temperatura;
+	}
+
+	public Dificultad getDificultad() {
+		return dificultad;
+	}
+
+	public void setDificultad(Dificultad dificultad) {
+		this.dificultad = dificultad;
+	}
+
+	public double getCoste() {
+		return coste;
+	}
+
+	public void setCoste(double coste) {
+		this.coste = coste;
+	}
+
+	public List<String> getPasos() {
+		return pasos;
+	}
+
+	public void setPasos(List<String> pasos) {
+		this.pasos = pasos;
+	}
+
 	@Override
 	public String toString() {
-		return "Receta [id=" + id + ", nombre=" + nombre + "]";
+		return "Receta [id=" + id + ", nombre=" + nombre + ", ingredientes=" + ingredientes + ", foto=" + foto
+				+ ", categoriaReceta=" + categoriaReceta + ", tiempoDeCoccion=" + tiempoDeCoccion
+				+ ", tiempoDePreparacion=" + tiempoDePreparacion + ", temperatura=" + temperatura + ", dificultad="
+				+ dificultad + ", coste=" + coste + ", pasos=" + pasos + "]";
 	}
-	
+
 }
