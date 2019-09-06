@@ -4,13 +4,15 @@ import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
 @Entity
 @Table(name="RECETAS")
@@ -31,28 +33,24 @@ public class Receta implements Serializable {
 	    )
 	private List<Ingrediente> ingredientes;
 	
-	@Transient
 	private String foto;
 	
-	@Transient
+	@Enumerated(EnumType.STRING)
 	private CategoriaReceta categoriaReceta;
 	
-	@Transient
 	private int tiempoDeCoccion;
-	
-	@Transient
 	private int tiempoDePreparacion;
 	
-	@Transient
+	@Enumerated(EnumType.STRING)
 	private Temperatura temperatura;
 	
-	@Transient
+	@Enumerated(EnumType.STRING)
 	private Dificultad dificultad;
     
-	@Transient
 	private double coste;
     
-	@Transient
+	@ElementCollection
+	
 	private List<String> pasos;
 	
 	public Receta() {

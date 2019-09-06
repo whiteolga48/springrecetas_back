@@ -15,10 +15,10 @@ INSERT INTO INGREDIENTES VALUES
 
 
 INSERT INTO RECETAS VALUES
-(10,'Receta 10'),
-(11,'Receta 11'),
-(12,'Receta 12'),
-(13,'Receta 13');
+(10,'Receta 10','receta10.jpg','POSTRE',10,15,'ALTA','MEDIA',6.4),
+(11,'Receta 11','receta11.jpg','PRIMERO',15,20,'ALTA','MEDIA',4.0),
+(12,'Receta 12','receta12.jpg','SEGUNDO',18,40,'BAJA','ALTA',12.5),
+(13,'Receta 13','receta13.jpg','PRIMERO',40,120,'MEDIA','MEDIA',15.8);
 
 
 INSERT INTO RECETAS_INGREDIENTES VALUES
@@ -36,6 +36,27 @@ INSERT INTO RECETAS_INGREDIENTES VALUES
 (12,12,11),
 (13,13,13),
 (14,13,14);
+
+INSERT INTO RECETA_PASOS VALUES
+(10,0,'paso...'),
+(10,1,'paso...'),
+(10,2,'paso...'),
+(10,3,'paso...'),
+(10,4,'paso...'),
+(10,5,'paso...'),
+(10,6,'paso...'),
+(11,0,'paso...'),
+(11,1,'paso...'),
+(11,2,'paso...'),
+(12,0,'paso...'),
+(12,1,'paso...'),
+(12,2,'paso...'),
+(12,3,'paso...'),
+(12,4,'paso...'),
+(12,5,'paso...'),
+(12,6,'paso...'),
+(13,0,'paso...'),
+(13,1,'paso...');
 
 
 
