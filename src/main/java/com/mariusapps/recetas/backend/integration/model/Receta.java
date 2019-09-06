@@ -3,8 +3,12 @@ package com.mariusapps.recetas.backend.integration.model;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
@@ -17,7 +21,14 @@ public class Receta implements Serializable {
 	private Long id;
 	private String nombre;
 	
-	@Transient
+	@ManyToMany(cascade = { 
+	        CascadeType.PERSIST, 
+	        CascadeType.MERGE
+	    })
+	    @JoinTable(name = "RECETAS_INGREDIENTES",
+	        joinColumns = @JoinColumn(name = "ID_RECETA"),
+	        inverseJoinColumns = @JoinColumn(name = "ID_INGREDIENTE")
+	    )
 	private List<Ingrediente> ingredientes;
 	
 	@Transient
