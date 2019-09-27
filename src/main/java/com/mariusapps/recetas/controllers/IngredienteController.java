@@ -48,7 +48,7 @@ public class IngredienteController {
 	
 	@RequestMapping(value="/ingredientes/{id}",
 					method=RequestMethod.DELETE)
-	public String delete(@PathVariable int codigo) {
+	public String delete(@PathVariable("id") int codigo) {
 		
 		ingredienteRepository.deleteById((long)codigo); 
 		
