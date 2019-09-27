@@ -28,7 +28,7 @@ INSERT INTO INGREDIENTES VALUES
 INSERT INTO RECETAS VALUES
 (10,'Arroz con pollo','receta10.jpg','PRIMERO',10,15,'ALTA','MEDIA',3.4),
 (11,'Conejo a la cerveza','receta11.jpg','PRIMERO',15,20,'ALTA','MEDIA',4.0),
-(12,'Natillas de chocolate','receta12.jpg','POSTRE',18,40,'BAJA','ALTA',1.0),
+(12,'Natillas de rico chocolate','receta12.jpg','POSTRE',18,40,'BAJA','ALTA',1.0),
 (13,'Chili Vegetariano','receta13.jpg','PRIMERO',40,120,'MEDIA','MEDIA',2.0);
 
 INSERT INTO RECETAS_INGREDIENTES VALUES
