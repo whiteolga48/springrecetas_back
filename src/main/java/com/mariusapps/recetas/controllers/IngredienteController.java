@@ -55,6 +55,4 @@ public class IngredienteController {
 		return "OK";
 	}
 	
-	
-	
 }
